@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:600italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="./ToDo_List.css" media="screen" title="no title" charset="utf-8">
+    <title>ToDo List</title>
+</head>
+
+<body>
+
+    <section class="quote-container">
+      <i class="pin"></i>
+      <blockquote class="note yellow">
+        <h1><strong>ToDo List</strong></h1>
+        <ul id="toDos"></ul>
+        <form>
+
+            <label>Things To Do
+                <input name="todo[todo]">
+                <button>Add To List</button>
+              <strong><div class="completedBox"></div></strong>
+            </label>
+
+
+            <!-- <button>Add To List</button> -->
+        </form>
+
+        <!-- <div class="completedBox"></div> -->
+
+</blockquote>
+
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="ToDo_List_Data.js" type="text/javascript"></script>
+    <script src="ToDo_List.js" type="text/javascript"></script>
+
+</body>
+
+</html>
