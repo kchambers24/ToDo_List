@@ -62,30 +62,30 @@ $(document).ready(() => {
     })
 
     // start of test code
-//
-//     $('#toDos').on('click', '.complete-button', function(event) {
-//       var item = $(event.target).parent()
-//       var isItemCompleted = item.hasClass('completed')
-//       var itemId = item.attr('data-id')
-//       var updateRequest = $.ajax({
-//   type: 'PUT',
-//   url: `${site}/todos` + itemId,
-//   headers: {
-//     "Authorization": "Token token=supadupasecret"
-// },
-// da
-//   data: { completed: !isItemCompleted }
-// })
-//
-// updateRequest.done(function(itemData) {
-//   if (itemData.data.attributes["is-complete"]) {
-//     item.addClass('completed')
-//   } else {
-//     item.removeClass('completed')
-//   }
-// })
-//
-// })
+    //
+    //     $('#toDos').on('click', '.complete-button', function(event) {
+    //       var item = $(event.target).parent()
+    //       var isItemCompleted = item.hasClass('completed')
+    //       var itemId = item.attr('data-id')
+    //       var updateRequest = $.ajax({
+    //   type: 'PUT',
+    //   url: `${site}/todos` + itemId,
+    //   headers: {
+    //     "Authorization": "Token token=supadupasecret"
+    // },
+    // da
+    //   data: { completed: !isItemCompleted }
+    // })
+    //
+    // updateRequest.done(function(itemData) {
+    //   if (itemData.data.attributes["is-complete"]) {
+    //     item.addClass('completed')
+    //   } else {
+    //     item.removeClass('completed')
+    //   }
+    // })
+    //
+    // })
 
 
     // end of test code
