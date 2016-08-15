@@ -1,4 +1,6 @@
 var site = "https://fathomless-woodland-51903.herokuapp.com"
+
+//doc is ready
 $(document).ready(() => {
     $.getJSON({
         url: `${site}/todos`,
@@ -13,16 +15,11 @@ $(document).ready(() => {
             $("input[type=checkbox]").on("click", countChecked);
         }
     });
-
     var countChecked = function() {
         var n = $("li").length - $("input:checked").length;
         $("div").text(n + (n === 1 ? " is" : " things are") + " left to do");
+        //shorthand if statement
     };
-
-
-
-
-
     $("form").submit(function(event) {
         $.post({
             url: `${site}/todos`,
@@ -32,9 +29,9 @@ $(document).ready(() => {
             data: $(this).serialize(),
             success: function(response) {
                 $("#toDos li:last").data("id", response.data.id)
+                //key, value ("id", response.data.id)
             }
         });
-
         var taskHTML = `<li>${$(this).find("input").val()}<button class="delete">Delete</button><input type="checkbox"</li>`;
         $("#toDos").append(taskHTML);
 
@@ -43,13 +40,11 @@ $(document).ready(() => {
         $("input").val("");
 
     })
-
-
-
-
+    //clicking on UL and targeting the delete button on click event
     $("#toDos").on("click", ".delete", function(event) {
         var self = $(this);
         $.ajax({
+          //calling method of Delete with .ajax and passing to the URL
             url: `${site}/todos/${self.parent().data("id")}`,
             headers: {
                 "Authorization": "Token token=supadupasecret"
@@ -57,6 +52,8 @@ $(document).ready(() => {
             type: "DELETE",
             success: function(data) {
                 self.parent().remove();
+                //if a delete is a success. remove list item
+                //delete button is a child of the li
             }
         })
     })
@@ -86,11 +83,6 @@ $(document).ready(() => {
     // })
     //
     // })
-
-
     // end of test code
-
-
-
 
 })
